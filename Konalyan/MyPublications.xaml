@@ -1,0 +1,28 @@
+﻿<Window x:Class="Konalyan.MyPublications"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Мои статьи" Height="480" Width="815"
+        WindowStartupLocation="Manual"
+        Background="{DynamicResource BackgroundColor}">
+    <Canvas>
+        <Border x:Name="TopBar" Background="{DynamicResource MainColor}" Width="800" Height="60"/>
+        <TextBlock Text="Мои статьи" FontSize="24" FontWeight="Bold" Foreground="White" Canvas.Left="20" Canvas.Top="15"/>
+
+        <Button x:Name="BtnHome" Content="Главная" Width="100" Height="30" Canvas.Left="197" Canvas.Top="15"
+                Background="White" Foreground="{DynamicResource MainColor}" FontWeight="Bold" Click="BtnHome_Click"/>
+        <Button x:Name="BtnSettings" Content="Настройки" Width="100" Height="30" Canvas.Left="302" Canvas.Top="15"
+                Background="White" Foreground="{DynamicResource MainColor}" FontWeight="Bold" Click="BtnSettings_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="BtnExit" Content="Выйти" Width="80" Height="30" Canvas.Left="700" Canvas.Top="15"
+                Background="White" Foreground="{DynamicResource MainColor}" FontWeight="Bold" Click="BtnExit_Click"/>
+
+        <TextBlock Text="Поиск по хэштегам:" FontSize="16" FontWeight="Bold" Foreground="{DynamicResource MainColor}" Canvas.Left="20" Canvas.Top="70"/>
+        <TextBox x:Name="SearchBox" Width="300" Height="30" Canvas.Left="180" Canvas.Top="70" TextChanged="SearchBox_TextChanged"/>
+
+        <Border Canvas.Left="20" Canvas.Top="110" Width="760" Height="340"
+                Background="{DynamicResource BackgroundColor}" CornerRadius="10" BorderBrush="{DynamicResource MainColor}" BorderThickness="2">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel x:Name="MyPublicationsPanel" Margin="10"/>
+            </ScrollViewer>
+        </Border>
+    </Canvas>
+</Window>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="Konalyan.mainprogram"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="mainprogram" Height="480" Width="815"
+        WindowStartupLocation="Manual"
+        Background="{DynamicResource BackgroundColor}">
+    <Canvas>
+        <Border x:Name="TopBar" Background="{DynamicResource MainColor}" Width="800" Height="60"/>
+        <TextBlock Text="MyBlog" FontSize="24" FontWeight="Bold" Foreground="White" Canvas.Left="20" Canvas.Top="15"/>
+        <Button x:Name="BtnMyArticles" Content="Мои статьи" Width="100" Height="30" Canvas.Left="197" Canvas.Top="15"
+                Background="White" Foreground="{DynamicResource MainColor}" FontWeight="Bold" Click="BtnMyArticles_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="BtnSettings" Content="Настройки" Width="100" Height="30" Canvas.Left="302" Canvas.Top="15"
+                Background="White" Foreground="{DynamicResource MainColor}" FontWeight="Bold" Click="BtnSettings_Click" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button x:Name="BtnExit" Content="Выйти" Width="80" Height="30" Canvas.Left="700" Canvas.Top="15"
+                Background="White" Foreground="{DynamicResource MainColor}" FontWeight="Bold" Click="BtnExit_Click"/>
+        <Button x:Name="BtnPublicate" Content="Опубликовать" Width="120" Height="35" Canvas.Left="650" Canvas.Top="70"
+                Background="{DynamicResource MainColor}" Foreground="White" FontWeight="Bold" Click="BtnPublicate_Click"/>
+
+        <Border Canvas.Left="20" Canvas.Top="120" Width="760" Height="300"
+        Background="{DynamicResource BackgroundColor}" CornerRadius="10" BorderBrush="{DynamicResource MainColor}" BorderThickness="2">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel x:Name="PublicationsPanel" Margin="10"/>
+            </ScrollViewer>
+        </Border>
+
+    </Canvas>
+</Window>

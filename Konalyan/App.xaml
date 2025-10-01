@@ -1,0 +1,9 @@
+﻿<Application x:Class="Konalyan.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="MainColor" Color="#6A0DAD"/>
+        <SolidColorBrush x:Key="BackgroundColor" Color="White"/>
+    </Application.Resources>
+</Application>
