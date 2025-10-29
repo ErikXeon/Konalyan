@@ -103,11 +103,15 @@ namespace Konalyan
 
                         File.WriteAllText(publicationsFile,
                             string.Join(separator + Environment.NewLine, allPosts) +
-                            Environment.NewLine + separator + Environment.NewLine);
+                            Environment.NewLine + separator);
 
                         LoadPublications(filter);
                     }
                 };
+
+
+
+
 
                 postStack.Children.Add(titleBlock);
                 postStack.Children.Add(textBlock);

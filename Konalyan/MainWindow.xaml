@@ -1,9 +1,11 @@
 ﻿<Window x:Class="Konalyan.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="460" Width="485"
+        Title="Окно входа" Height="460" Width="485"
         WindowStartupLocation="CenterScreen"
-        Background="{DynamicResource BackgroundColor}">
+        Background="{DynamicResource BackgroundColor}"
+        Icon="/blog.ico"
+        ResizeMode="NoResize">
     <Canvas Margin="0,0,-17,-33">
         <Border Canvas.Left="10" Canvas.Top="10" Width="450" Height="400"
                 CornerRadius="25" Background="{DynamicResource MainColor}" BorderBrush="White" BorderThickness="4"/>

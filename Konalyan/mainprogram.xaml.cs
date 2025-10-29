@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -22,7 +23,6 @@ namespace Konalyan
                 this.Left = Application.Current.MainWindow.Left;
                 this.Top = Application.Current.MainWindow.Top;
             }
-
             LoadPublications();
         }
 
@@ -34,11 +34,13 @@ namespace Konalyan
                 File.Create(publicationsFile).Close();
 
             string content = File.ReadAllText(publicationsFile);
-            string[] posts = content.Split(new string[] { separator }, StringSplitOptions.RemoveEmptyEntries);
+            string[] posts = content
+                .Split(new string[] { separator }, StringSplitOptions.RemoveEmptyEntries)
+                .Where(p => !string.IsNullOrWhiteSpace(p.Trim())).ToArray();
 
             foreach (string post in posts)
             {
-                var lines = post.Trim().Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                var lines = post.Trim().Split(new[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
 
                 string author = lines.Length > 0 ? lines[0].Replace("Автор: ", "") : "";
                 string title = lines.Length > 1 ? lines[1].Replace("Заголовок: ", "") : "";

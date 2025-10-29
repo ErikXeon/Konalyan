@@ -39,7 +39,7 @@ namespace Konalyan
             string publication = $"Автор: {currentUser}{Environment.NewLine}" +
                                  $"Заголовок: {title}{Environment.NewLine}" +
                                  $"Текст: {content}{Environment.NewLine}" +
-                                 $"Хэштэги: {hashtags}{Environment.NewLine}{separator}{Environment.NewLine}";
+                                 $"Хэштэги: {hashtags}{separator}";
 
             File.AppendAllText(filePath, publication);
             MessageBox.Show("Публикация добавлена!");

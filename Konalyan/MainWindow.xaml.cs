@@ -21,7 +21,7 @@ namespace Konalyan
 
             ActionButton.Click += ActionButton_Click;
         }
-        // метод чтобы при входе показывало одно, при регистрации другое типа
+        // метод чтобы при входе показывало одно,а при регистрации другое типа
         private void ModeChanged(object sender, RoutedEventArgs e)
         {
             if (RegisterTab.IsChecked == true)
